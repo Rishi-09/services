@@ -13,7 +13,17 @@ export default function FeedbackSection() {
         <h3 className="text-2xl text-center text-amber-50/50 ">
           Loved by Radio Listeners Worldwide
         </h3>
-        <InfiniteMovingCardsUsage testimonials={testimonials} />
+        <div
+          className="overflow-hidden"
+          style={{
+            maskImage:
+              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+          }}
+        >
+          <InfiniteMovingCardsUsage testimonials={testimonials} />
+        </div>
       </div>
     </section>
   );

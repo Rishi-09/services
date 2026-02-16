@@ -104,13 +104,11 @@ export default function TalesFMPage() {
           />
         </div>
 
-        <footer className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500">
-          <p>
-            Whether {"you're"} looking for a global online radio app or a simple
-            radio app without ads, Tales FM brings everything together in one
-            place.
-          </p>
-        </footer>
+        <p className="text-xl text-gray-400 " >
+          Whether {"you're"} looking for a global online radio app or a simple
+          radio app without ads, Tales FM brings everything together in one
+          place.
+        </p>
       </Section>
     </main>
   );

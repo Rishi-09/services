@@ -5,9 +5,13 @@ import {
   MusicFocusedSectionData,
   CityRadioStations,
   RadioGenresData,
-  FAQItem
+  FAQItem,
 } from "../interfaces";
-
+import {
+  ListSectionData,
+  ParagraphSectionData,
+  GenreSectionData,
+} from "./interfaces";
 export const INDIAN_RADIO_DATA: SectionContent = {
   title: {
     text: "Indian Radio Online ",
@@ -289,55 +293,6 @@ export const cityRadioStations: CityRadioStations = {
   ],
 };
 
-export const STEPS_TO_LISTEN: MusicFocusedSectionData = {
-  title: "Simple steps to listen to Indian radio online",
-  description:
-    "To experience vast Indian radio content online, just follow these easy steps and pick your mood-",
-  stations: [
-    { name: "Open the Tales FM website or app" },
-    { name: "Choose a station by language, city, or genre" },
-    { name: "Tap play and listen instantly" },
-    { name: "Works on mobile, tablet, and desktop" },
-  ],
-};
-
-export const BENEFITS_OF_LISTEN: MusicFocusedSectionData = {
-  title: "Benefits of Listening to Indian Radio Online",
-  description:
-    "Listening to the radio online has many benefits compared to listening to traditional radio:",
-  stations: [
-    { name: "Free access to Indian radio stations" },
-    { name: "No FM receiver needed" },
-    { name: "Listen anytime, anywhere" },
-    { name: "Wide variety of languages & genres" },
-    { name: "5. Perfect for travel, work, relaxation, and many more…" },
-  ],
-};
-
-export const globalListeners: SectionContent = {
-  title: {
-    text: "Indian Radio Online for NRIs & Global Listeners",
-    weight: "500",
-    size: "3xl",
-  },
-  paragraphs: [
-    "For Indians living abroad, radio is often the easiest way to feel closer to home. With Indian Radio Online for NRI listeners, familiar voices, languages, and music help bridge the distance between countries and cultures.",
-    "It’s popular among students, professionals, and frequent travellers who want to stay in touch with their favourite music and shows.",
-    "No matter where you are in the world, you can listen to Indian radio abroad and relive memories through songs, news, and shows that reflect India’s diverse culture and spirit.",
-  ],
-};
-
-export const popularIndianRadioGenres: SectionContent = {
-  title: {
-    text: "Popular Indian Radio Genres",
-    size: "3xl",
-    weight: "500",
-  },
-  paragraphs: [
-    "Indian online radio is as diverse as its culture. Whether you want to listen to Bollywood hits, or want to listen to bhajans, or are in the mood for thoughtful conversations, there is always a genre that matches your taste.",
-  ],
-};
-
 // Radio Genres
 
 export const radioGenresData: RadioGenresData = {
@@ -345,57 +300,139 @@ export const radioGenresData: RadioGenresData = {
   genres: [
     {
       name: "Bollywood",
-      description: "Charts, film tracks that keep listeners engaged throughout the day"
+      description:
+        "Charts, film tracks that keep listeners engaged throughout the day",
     },
     {
       name: "Non-stop Bollywood",
-      description: "Charts, film tracks that keep listeners engaged throughout the day"
+      description:
+        "Charts, film tracks that keep listeners engaged throughout the day",
     },
     {
       name: "Spiritual & Bhakti",
-      description: "Radio stations featuring bhajans, kirtans, and religious music from different traditions"
+      description:
+        "Radio stations featuring bhajans, kirtans, and religious music from different traditions",
     },
     {
       name: "News & Talk",
-      description: "Live news updates, talks, interviews, and discussions on current affairs, lifestyle, social topics"
+      description:
+        "Live news updates, talks, interviews, and discussions on current affairs, lifestyle, social topics",
     },
     {
       name: "Retro & Old",
-      description: "Songs from past decades that are timeless masterpieces and bring nostalgia"
+      description:
+        "Songs from past decades that are timeless masterpieces and bring nostalgia",
     },
     {
       name: "Regional Folk",
-      description: "Music from various Indian states, celebrating regional culture and heritage"
+      description:
+        "Music from various Indian states, celebrating regional culture and heritage",
     },
     {
       name: "Youth & Indie",
-      description: "Fresh independent artists and contemporary music for younger trend-seeking listeners"
-    }
-  ]
+      description:
+        "Fresh independent artists and contemporary music for younger trend-seeking listeners",
+    },
+  ],
 };
-
-
 
 export const faqData: FAQItem[] = [
   {
     question: "Can I listen to FM online?",
-    answer: "Yes, you can listen to FM radio online using Tales FM. Our app streams live FM stations from around the world directly to your device without needing any special hardware."
+    answer:
+      "Yes, you can listen to FM radio online using Tales FM. Our app streams live FM stations from around the world directly to your device without needing any special hardware.",
   },
   {
     question: "How to listen FM on mobile?",
-    answer: "Download Tales FM from your app store, open the app, browse or search for FM stations, and tap to start streaming instantly. No setup required!"
+    answer:
+      "Download Tales FM from your app store, open the app, browse or search for FM stations, and tap to start streaming instantly. No setup required!",
   },
   {
     question: "Do I need an FM receiver to listen?",
-    answer: "No FM receiver needed! Tales FM streams radio stations over the internet, so you can listen on any smartphone, tablet, or computer with an internet connection."
+    answer:
+      "No FM receiver needed! Tales FM streams radio stations over the internet, so you can listen on any smartphone, tablet, or computer with an internet connection.",
   },
   {
     question: "Which Indian radio stations are popular?",
-    answer: "Popular Indian stations on Tales FM include Radio Mirchi, Red FM, All India Radio, Radio City, and BIG FM. Search for your city or favorite station in the app."
+    answer:
+      "Popular Indian stations on Tales FM include Radio Mirchi, Red FM, All India Radio, Radio City, and BIG FM. Search for your city or favorite station in the app.",
   },
   {
     question: "Can I listen Indian radio stations for free?",
-    answer: "Absolutely! Tales FM lets you listen to all Indian radio stations completely free with no subscriptions, ads interrupting your listening, or hidden costs."
+    answer:
+      "Absolutely! Tales FM lets you listen to all Indian radio stations completely free with no subscriptions, ads interrupting your listening, or hidden costs.",
   },
 ];
 
+export const SIMPLE_STEPS_DATA: ListSectionData = {
+  heading: "Simple steps to listen to Indian radio online",
+  description:
+    "To experience vast Indian radio content online, just follow these easy steps and pick your mood -",
+  items: [
+    "Open the Tales FM website or app",
+    "Choose a station by language, city, or genre",
+    "Tap play and listen instantly",
+    "Works on mobile, tablet, and desktop",
+  ],
+};
+
+export const BENEFITS_DATA: ListSectionData = {
+  heading: "Benefits of Listening to Indian Radio Online",
+  description:
+    "Listening to the radio online has many benefits compared to listening to traditional radio:",
+  items: [
+    "Free access to Indian radio stations",
+    "No FM receiver needed",
+    "Listen anytime, anywhere",
+    "Wide variety of languages & genres",
+    "Perfect for travel, work, relaxation, and many more...",
+  ],
+};
+
+export const NRI_SECTION_DATA: ParagraphSectionData = {
+  heading: "Indian Radio Online for NRIs & Global Listeners",
+  paragraphs: [
+    "For Indians living abroad, radio is often the easiest way to feel closer to home. With Indian Radio Online for NRI listeners, familiar voices, languages, and music help bridge the distance between countries and cultures.",
+    "It's popular among students, professionals, and frequent travellers who want to stay in touch with their favourite music and shows.",
+    "No matter where you are in the world, you can listen to Indian radio abroad and relive memories through songs, news, and shows that reflect India's diverse culture and spirit.",
+  ],
+};
+
+export const INDIAN_GENRES_DATA: GenreSectionData = {
+  heading: "Popular Indian Radio Genres",
+  intro:
+    "Indian online radio is as diverse as its culture. Whether you want to listen to Bollywood hits, or want to listen to bhajans, or are in the mood for thoughtful conversations, there is always a genre that matches your taste.",
+  subIntro: "Here are some popular Indian radio genres:",
+  genres: [
+    {
+      title: "Bollywood Radio",
+      description:
+        "Non-stop Bollywood hits, chartbusters, and film soundtracks that keep listeners engaged throughout the day.",
+    },
+    {
+      title: "Devotional & Bhakti Radio",
+      description:
+        "Spiritual and peaceful radio stations featuring bhajans, kirtans, and religious music from different traditions.",
+    },
+    {
+      title: "News & Talk Radio",
+      description:
+        "Live news updates, talk shows, interviews, and discussions on current affairs, lifestyle, and social topics.",
+    },
+    {
+      title: "Retro & Old Songs",
+      description:
+        "Classic tracks from past decades that are timeless masterpieces and bring nostalgia.",
+    },
+    {
+      title: "Regional Folk Music",
+      description:
+        "Local rhythms and traditional music from various Indian states, celebrating regional culture and heritage.",
+    },
+    {
+      title: "Youth & Indie Music",
+      description:
+        "Fresh sounds, independent artists, and contemporary music for younger and trend-seeking listeners.",
+    },
+  ],
+};

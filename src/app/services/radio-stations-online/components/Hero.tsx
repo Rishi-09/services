@@ -3,10 +3,26 @@ import Button from "../../ui/Button";
 
 export default function RadioStationsHero() {
   return (
-    <section className="relative min-h-screen bg-black text-white flex items-center justify-center px-6 py-20">
-      <div className="max-w-5xl mx-auto text-center space-y-8">
+    <section className="relative min-h-screen max-w-100vw bg-black text-white flex items-center justify-center px-6 py-20 overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 blur-lg w-full h-full object-cover"
+      >
+        <source src="/bgAnimation.webm" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Optional: Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8">
         {/* Main Heading */}
-        <h1 className="text-3xl md:text-5xl lg:text-6xl sm:text-4xl  font-bold leading-tight">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl sm:text-4xl font-bold leading-tight">
           Radio Stations Online — Stream Live Radio with Tales FM
         </h1>
 

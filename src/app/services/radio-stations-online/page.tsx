@@ -10,13 +10,22 @@ import PopularRadioCategories from "./components/PopularRadioCategories";
 import FeedbackSection from "./components/FeedbackSection";
 import FaqSection from "./components/FaqSection";
 import SimpleRadioStation from "./components/SimpleRadioStation";
-export default function page() {
+import { SectionContainer } from "../components/SectionContainer";
+export default function Page() {
   return (
-    <main className="max-w-9/12 mx-auto">
+    <main className="bg-black text-white">
       <Hero />
-      <Body data={LIVE_RADIO_STATIONS} />
+
+      <SectionContainer>
+        <Body data={LIVE_RADIO_STATIONS} />
+      </SectionContainer>
+
       <WhatYouCanListenTo />
-      <SmarterWay />
+
+      <SectionContainer>
+        <SmarterWay />
+      </SectionContainer>
+
       <BrowseYourWay />
       <HowTalesFmWork />
       <PopularRadioCategories />
