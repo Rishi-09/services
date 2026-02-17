@@ -2,82 +2,7 @@
 
 import { Radio } from "lucide-react";
 
-interface Station {
-  name: string;
-  frequency: string;
-  genre: string;
-  languages: string;
-  country: string;
-}
-
-const stations: Station[] = [
-  {
-    name: "Radio Mirchi",
-    frequency: "98.3 FM",
-    genre: "Bollywood, Indian music",
-    languages:
-      "Hindi, Telugu, Punjabi, Malayalam, Tamil, Kannada, Bengali, Gujarati, Multilingual, International, Marathi",
-    country: "India",
-  },
-  {
-    name: "Red FM",
-    frequency: "93.5 FM",
-    genre: "Bollywood, talk, rock, dance",
-    languages: "Hindi, Kannada, Malayalam, Telugu",
-    country: "India",
-  },
-  {
-    name: "Radio City",
-    frequency: "91.1 FM",
-    genre: "News, talk, pop",
-    languages: "Hindi",
-    country: "India",
-  },
-  {
-    name: "Fever FM",
-    frequency: "Primarily 104.0 MHz",
-    genre: "Bollywood",
-    languages:
-      "Hindi, English, Marathi in Mumbai, Tamil in Chennai, Kannada in Bengaluru",
-    country: "India",
-  },
-  {
-    name: "All India Radio (AIR) FM Gold/Rainbow",
-    frequency: "107.1 MHz",
-    genre: "Bollywood, Western pop",
-    languages:
-      "Hindi, English, Marathi in Mumbai, Tamil in Chennai, Kannada in Bengaluru",
-    country: "India",
-  },
-  {
-    name: "Vividh Bharati (AIR)",
-    frequency: "Between 93.9 MHz and 104.5 MHz",
-    genre: "Bollywood, shows, comedy, etc",
-    languages: "Hindi and other regional languages",
-    country: "India",
-  },
-  {
-    name: "Radio Nasha",
-    frequency: "107.2 FM, 91.9 FM, 94.3 FM",
-    genre: "Bollywood, Pop",
-    languages: "Hindi",
-    country: "India",
-  },
-  {
-    name: "My FM",
-    frequency: "94.3 FM",
-    genre: "News, pop",
-    languages: "Hindi",
-    country: "India",
-  },
-  {
-    name: "Radio One",
-    frequency: "94.3 FM",
-    genre: "Pop, rock",
-    languages: "International, English",
-    country: "India",
-  },
-];
+import { stations } from "../constants";
 
 export default function ExploreIndianRadioByCategory() {
   return (
@@ -111,32 +36,11 @@ export default function ExploreIndianRadioByCategory() {
 
         {/* Grid */}
         {/* Cards Wrapper */}
-        <div
-          className="
-    flex gap-6 overflow-x-auto scroll-smooth
-    snap-x snap-mandatory
-    no-scrollbar
-    md:grid md:grid-cols-2 lg:grid-cols-3
-    md:overflow-visible
-  "
-        >
+        <div className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar pb-4">
           {stations.map((station, index) => (
             <div
               key={index}
-              className="
-        group relative
-        min-w-[85%] sm:min-w-[70%] md:min-w-0
-        snap-start
-        rounded-3xl
-        border border-white/10
-        bg-linear-to-br from-white/10 via-white/5 to-transparent
-        backdrop-blur-xl
-        p-8
-        shadow-[0_10px_40px_rgba(0,0,0,0.6)]
-        transition-all duration-500
-        hover:-translate-y-2
-        hover:shadow-[0_20px_60px_rgba(0,0,0,0.8)]
-      "
+              className="group relative min-w-[85%] sm:min-w-[70%] md:min-w-0 snap-start rounded-3xl border border-white/10"
             >
               {/* Soft inner light */}
               <div className="absolute inset-0 rounded-3xl bg-white/5 opacity-30 pointer-events-none" />

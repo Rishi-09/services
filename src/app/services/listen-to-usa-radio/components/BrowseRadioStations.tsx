@@ -52,6 +52,27 @@ export default function BrowseByCity() {
         "KRRL (Real 92.3): Hip Hop & R&B.",
       ],
     },
+    {
+      name: "New York",
+      stations: [
+        "WHTZ (Z100): Top 40 & Pop.",
+        "WLTW (106.7 Lite FM): Adult Contemporary/Soft Rock.",
+        "WQHT (Hot 97): Hip Hop & R&B.",
+        "WWPR (Power 105.1): Hip Hop & R&B.",
+        "WFAN (66 AM/101.9 FM): Sports Radio.",
+        "WINS (1010 WINS/92.3 FM): All News.",
+      ],
+    },
+    {
+      name: "Houston",
+      stations: [
+        "KODA (Sunny 99.1): Adult Contemporary.",
+        "KMJQ (Majic 102.1): Urban Adult Contemporary/R&B.",
+        "KKBQ (93Q Country): Country.",
+        "KTBZ (94.5 The Buzz): Alternative/Rock.",
+        "KBBX (97.9 The Box): Hip Hop & R&B.",
+      ],
+    },
   ];
 
   const scroll = (direction: "left" | "right") => {
@@ -102,28 +123,14 @@ export default function BrowseByCity() {
           {/* Scroll Container */}
           <div
             ref={scrollRef}
-            className="
-            flex gap-4 sm:gap-6
-            overflow-x-auto scroll-smooth
-            snap-x snap-mandatory
-            no-scrollbar
-            md:overflow-hidden
-          "
+            className="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar md:overflow-hidden"
+
           >
-            {cities.map((city, index) => (
+            {cities.map((city) => (
               <div
-                key={index}
-                className="
-                min-w-[88%] sm:min-w-[75%] md:min-w-[48%]
-                snap-start
-                rounded-2xl md:rounded-3xl
-                border border-white/10
-                bg-linear-to-br from-white/10 via-white/5 to-transparent
-                backdrop-blur-xl
-                shadow-md md:shadow-[0_10px_40px_rgba(0,0,0,0.6)]
-                p-6 sm:p-8
-                transition-all duration-300
-              "
+                key={city.name}
+                className="min-w-[88%] sm:min-w-[75%] md:min-w-[48%] snap-start rounded-2xl md:rounded-3xl border border-white/10 bg-linear-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl shadow-md md:shadow-[0_10px_40px_rgba(0,0,0,0.6)] p-6 sm:p-8 transition-all duration-300"
+
               >
                 <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">
                   {city.name}
@@ -131,7 +138,7 @@ export default function BrowseByCity() {
 
                 <ol className="space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-300">
                   {city.stations.map((station, i) => (
-                    <li key={i}>
+                    <li key={station}>
                       {i + 1}. {station}
                     </li>
                   ))}

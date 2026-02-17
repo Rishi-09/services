@@ -20,3 +20,20 @@ export interface GenreSectionData {
   subIntro: string;
   genres: GenreItem[];
 }
+export interface Station {
+  name: string;
+  frequency: string;
+  genre: string;
+  languages: string;
+  country: string;
+}
+
+export interface LanguageStation {
+  language: string;
+  stations: string[];
+}
+
+export interface CityStation {
+  city: string;
+  stations: string[];
+}

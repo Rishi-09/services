@@ -53,10 +53,14 @@ export const genres = [
     label: "Genre 1",
     title: "Pop & Top 40",
     icon: "Music",
-    description: "Your description here...",
+    description:
+      "Catchy melodies, verse-chorus structures, and widespread appeal characterize pop music. The Top 40 consists simply of the forty most frequently broadcast songs.",
     stations: [
-      { name: "Station 1" },
-      { name: "Station 2" },
+      { name: "KIIS-FM (102.7 FM): Los Angeles, CA (Flagship station for On Air with Ryan Seacrest)" },
+      { name: "Z100 (100.3 FM): New York, NY (Top 40 & Pop)" },
+      { name: "103.5 KTU: New York, NY (Top 40 & Pop)" },
+      { name: "103.5 Kiss FM: Chicago, IL (Top 40 & Pop)" },
+      { name: "107.5 The River: Nashville, TN (Top 40 & Pop)" },
     ],
   },
   {
@@ -64,10 +68,14 @@ export const genres = [
     label: "Genre 2",
     title: "Rock & Alternative",
     icon: "Guitar",
-    description: "Your description here...",
+    description:
+      "Rock and alternative music feature strong guitar riffs, powerful vocals, and a mix of mainstream and indie influences. Alternative rock often experiments with sound while maintaining a modern edge.",
     stations: [
-      { name: "Station 1" },
-      { name: "Station 2" },
+      { name: "KROQ (106.7 FM): Los Angeles, CA (Alternative Rock)" },
+      { name: "Q104.3 (WAXQ): New York, NY (Classic Rock)" },
+      { name: "101WKQX: Chicago, IL (Alternative)" },
+      { name: "98 Rock (WIYY): Baltimore, MD (Active Rock)" },
+      { name: "The Buzz (94.5 KTBZ): Houston, TX (Alternative/Rock)" },
     ],
   },
   {
@@ -75,48 +83,90 @@ export const genres = [
     label: "Genre 3",
     title: "Hip-Hop & R&B",
     icon: "Mic2",
-    description: "Your description here...",
-    stations: [],
+    description:
+      "Hip-Hop and R&B blend rhythmic beats, lyrical flow, and soulful melodies. From classic rap to modern trap and contemporary R&B, this genre dominates urban radio charts.",
+    stations: [
+      { name: "Hot 97 (WQHT): New York, NY (Hip Hop)" },
+      { name: "Power 105.1 (WWPR): New York, NY (Hip Hop & R&B)" },
+      { name: "Real 92.3 (KRRL): Los Angeles, CA (Hip Hop)" },
+      { name: "97.9 The Box (KBBX): Houston, TX (Hip Hop & R&B)" },
+      { name: "V103 (WVEE): Atlanta, GA (R&B)" },
+    ],
   },
   {
     id: 4,
     label: "Genre 4",
     title: "Jazz & Blues",
     icon: "Music2",
-    description: "Your description here...",
-    stations: [],
+    description:
+      "Jazz and Blues focus on improvisation, expressive melodies, and deep emotional storytelling. From smooth jazz to classic blues, this genre delivers timeless sophistication.",
+    stations: [
+      { name: "WBGO (88.3 FM): Newark, NJ (Jazz)" },
+      { name: "WDCB (90.9 FM): Chicago, IL (Jazz)" },
+      { name: "KJAZZ (88.1 FM): Los Angeles, CA (Jazz & Blues)" },
+      { name: "KUVO (89.3 FM): Denver, CO (Jazz)" },
+      { name: "WWOZ (90.7 FM): New Orleans, LA (Jazz & Blues)" },
+    ],
   },
   {
     id: 5,
     label: "Genre 5",
     title: "Country Music",
     icon: "Guitar",
-    description: "Your description here...",
-    stations: [],
+    description:
+      "Country music blends storytelling lyrics with acoustic instruments like guitars and fiddles. From classic country to modern country-pop, it reflects heartfelt themes and Southern roots.",
+    stations: [
+      { name: "93Q Country (KKBQ): Houston, TX (Country)" },
+      { name: "99.5 The Wolf (KPLX): Dallas, TX (Country)" },
+      { name: "96.3 KSCS: Dallas, TX (Country)" },
+      { name: "102.5 KNIX: Phoenix, AZ (Country)" },
+      { name: "Big 98 WSIX: Nashville, TN (Country)" },
+    ],
   },
   {
     id: 6,
     label: "Genre 6",
     title: "News & Talk Radio",
     icon: "Radio",
-    description: "Your description here...",
-    stations: [],
+    description:
+      "News and Talk Radio delivers live news updates, political discussions, interviews, and community-focused programming. It keeps listeners informed and engaged with current events.",
+    stations: [
+      { name: "1010 WINS: New York, NY (All News)" },
+      { name: "KFI (640 AM): Los Angeles, CA (News/Talk)" },
+      { name: "WBBM Newsradio 780: Chicago, IL (News)" },
+      { name: "WFAN (660 AM/101.9 FM): New York, NY (Sports Talk)" },
+      { name: "WBAP (820 AM): Dallas, TX (News/Talk)" },
+    ],
   },
   {
     id: 7,
     label: "Genre 7",
     title: "Christian & Gospel",
     icon: "Heart",
-    description: "Your description here...",
-    stations: [],
+    description:
+      "Christian and Gospel music focus on faith-based lyrics, inspirational messages, and uplifting melodies. It ranges from contemporary worship to traditional gospel choirs.",
+    stations: [
+      { name: "K-LOVE (KLVE 107.5 FM): Los Angeles, CA (Christian Contemporary)" },
+      { name: "Air1 Radio: Nationwide (Worship Music)" },
+      { name: "WLIB (1190 AM): New York, NY (Gospel)" },
+      { name: "The Gospel Station: Nationwide (Southern Gospel)" },
+      { name: "WYCA Rejoice 102: Chicago, IL (Gospel)" },
+    ],
   },
   {
     id: 8,
     label: "Genre 8",
     title: "EDM & Dance",
     icon: "Zap",
-    description: "Your description here...",
-    stations: [],
+    description:
+      "EDM and Dance music feature high-energy beats, electronic production, and festival-style drops. From house and techno to trance and club hits, it’s built for movement.",
+    stations: [
+      { name: "103.5 KTU HD2: New York, NY (Dance Hits)" },
+      { name: "Evolution (iHeartRadio): Nationwide (EDM)" },
+      { name: "Pulse 87: New York, NY (Dance)" },
+      { name: "Energy 98: Los Angeles, CA (Dance/EDM)" },
+      { name: "Revolution 93.5: Miami, FL (Dance/EDM)" },
+    ],
   },
 ];
 

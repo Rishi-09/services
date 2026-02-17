@@ -1,16 +1,14 @@
 import {
   SectionContent,
-  RadioStationsData,
-  PublicRadioData,
-  MusicFocusedSectionData,
-  CityRadioStations,
-  RadioGenresData,
   FAQItem,
+  
 } from "../interfaces";
 import {
   ListSectionData,
   ParagraphSectionData,
-  GenreSectionData,
+  Station,
+  LanguageStation,
+  CityStation
 } from "./interfaces";
 export const INDIAN_RADIO_DATA: SectionContent = {
   title: {
@@ -40,14 +38,6 @@ export const WHY_STILL_RADIO: SectionContent = {
   ],
 };
 
-export const EXPLORE_INDIAN_RADIO: SectionContent = {
-  title: {
-    text: "Explore Indian Radio Stations Online by Category",
-    size: "3xl",
-    weight: "600",
-  },
-  paragraphs: ["Some of the popular radio stations online by category are:"],
-};
 
 export const RADIO_STATIONS_IN_INDIA: SectionContent = {
   title: {
@@ -60,281 +50,6 @@ export const RADIO_STATIONS_IN_INDIA: SectionContent = {
   ],
 };
 
-export const radioStationsData: RadioStationsData = {
-  title: "1. FM Radio Stations in India",
-  description:
-    "India has numerous popular FM radio stations, including commercial networks like Radio Mirchi, Red FM, Radio City, Big FM, and Fever FM, alongside public broadcaster All India Radio (AIR) channels such as Vividh Bharati, FM Gold, and FM Rainbow, offering music, news, and regional content on a variety of frequencies, with specific popular stations often varying by city and language (Hindi, English, Kannada, Tamil, etc.) showcasing its popular FM culture in metro & tier-2 cities of India.",
-  subheading: "Some popular radio stations across India are:",
-  content: [
-    {
-      name: "Radio Mirchi",
-      content: {
-        Country: "India",
-        Genre: ["Non-stop Hindi music"],
-        Frequency: "98.3 FM",
-        Languages: [
-          "Punjabi",
-          "Malayalam",
-          "Tamil",
-          "Bengali",
-          "Gujarati",
-          "Multilingual",
-          "International",
-          "Marathi",
-        ],
-      },
-    },
-    {
-      name: "Red FM",
-      content: {
-        Country: "India",
-        Genre: ["Bollywood", "talk", "rock", "dance"],
-        Frequency: "93.5 FM",
-        Languages: [
-          "Telugu",
-          "Punjabi",
-          "Malayalam",
-          "Tamil",
-          "Kannada",
-          "Bengali",
-          "Gujarati",
-          "Multilingual",
-          "International",
-          "Marathi",
-        ],
-      },
-    },
-    {
-      name: "Big FM",
-      content: {
-        Country: "India",
-        Genre: ["News", "talk"],
-        Frequency: "92.7 FM",
-        Languages: ["Hindi", "Telugu"],
-      },
-    },
-    {
-      name: "Fever FM",
-      content: {
-        Country: "India",
-        Genre: ["Country"],
-        Frequency:
-          "104.0 MHz (Delhi, Mumbai, Bengal); Other frequencies 91.9 MHz (Chennai), 104.1 MHz (Bengaluru), 90.4 MHz (Hyderabad AIR)",
-        Languages: ["Hindi", "English"],
-      },
-    },
-    {
-      name: "All India Radio (AIR Gold/Rainbow)",
-      content: {
-        Country: "India",
-        Genre: ["Bollywood", "Western pop"],
-        Frequency: "103.5 MHz, 101 MHz, 100.7 MHz, 101.9 MHz (Karnataka)",
-        Languages: [
-          "Hindi",
-          "English",
-          "Regional languages (e.g., Marathi Mumbai, Tamil Chennai, Kannada)",
-        ],
-      },
-    },
-    {
-      name: "Vividh Bharati (AIR)",
-      content: {
-        Country: "India",
-        Genre: ["Bollywood", "shows", "comedy"],
-        Frequency: "104.5 MHz",
-        Languages: ["Hindi and other regional languages"],
-      },
-    },
-    {
-      name: "Radio Nasha",
-      content: {
-        Country: "India",
-        Genre: ["Country"],
-        Frequency: "107.2 FM, 91.9 FM, 98.3 FM",
-        Languages: ["Hindi"],
-      },
-    },
-    {
-      name: "My FM",
-      content: {
-        Country: "India",
-        Genre: ["Bollywood"],
-        Frequency: "94.3 FM",
-        Languages: ["Hindi"],
-      },
-    },
-  ],
-};
-
-export const publicRadioData: PublicRadioData = {
-  title: "2. FM & Public Stations",
-  description:
-    "Public & widely accessible radio stations in India, dominated by national broadcaster All India Radio (AIR) and major commercial networks, including Akashvani, Vividh Bharati, FM Gold, Rainbow, Radio Mirchi and Red FM. These stations offer a mix of national, regional content and popular Bollywood songs.",
-  subheading: "Some of the popular radio stations are:",
-  stations: [
-    {
-      name: "Vividh Bharati (AIR) / Akashvani",
-    },
-    {
-      name: "AIR FM Gold / Rainbow",
-    },
-    {
-      name: "Radio Mirchi 98.3 FM",
-    },
-    {
-      name: "Red FM 93.5 FM",
-    },
-  ],
-};
-
-export const musicFocusedData: MusicFocusedSectionData = {
-  title: "3. Music-focused radio stations",
-  description:
-    "Music-focused radio stations, reach and focus on music programming (Bollywood, regional, retro), there are top 8:",
-  stations: [
-    { name: "Radio Mirchi 98.3 FM" },
-    { name: "Red FM 93.5 FM" },
-    { name: "Big City 104.8 FM" },
-    { name: "AIR Rainbow (AIR FM)" },
-    { name: "My FM 94.3" },
-  ],
-};
-
-export const talkNewsCommunity: MusicFocusedSectionData = {
-  title: "4. Talk, News & Community Radio",
-  description:
-    "Based on recent reports, awards, and the impact of radio in India, here is the list of five prominent talk, news, and community radio entities. These include national broadcasters and grassroots community stations that are influencing public dialogue:",
-  stations: [
-    { name: "All India Radio (AIR) / Akashvani" },
-    { name: "Radio Mewat 90.4 FM (Haryana)" },
-    { name: "Radio Bundelkhand 90.4 FM (Bundelkhand)" },
-    { name: "Gurgaon ki Awaaz 107.8 FM (NCR)" },
-    { name: "Radio Sharda 90.4 FM (Jammu & Kashmir)" },
-  ],
-};
-
-// City Radio Stations
-export const cityRadioStations: CityRadioStations = {
-  title: "Indian Radio Stations by City & Region",
-  description:
-    "You can also find regional voices and city vibes through Indian radio online. A list of popular Indian radio stations by city and voice is as follows:",
-  cities: [
-    {
-      name: "Delhi NCR Radio Stations",
-      stations: [
-        "1. Red FM 93.5 FM",
-        "2. Red FM 93.5 FM",
-        "3. Fever 104 FM",
-        "4. BIG FM 92.7 FM",
-        "5. Big FM 92.7 FM",
-        "6. AIR FM Gold",
-        "7. Ishq FM Gold",
-      ],
-    },
-    {
-      name: "Mumbai Radio Stations",
-      stations: [
-        "1. Red FM 93.5 FM",
-        "2. Radio City 91.1 FM",
-        "3. Radio Mirchi 98.3 FM",
-        "4. Fever 104 FM",
-        "5. Fever 104.7 FM",
-        "6. Akashvani (AIR)",
-        "7. Vividh Bharti",
-      ],
-    },
-    {
-      name: "Bangalore Radio Stations",
-      stations: [
-        "1. Red FM 93.5 FM",
-        "2. Fever 91.1 FM",
-        "3. Fever 104 FM",
-        "4. BIG FM 92.7 FM",
-        "5. Radio Mirchi 98.3 FM",
-      ],
-    },
-    {
-      name: "Chennai Radio Stations",
-      stations: ["1. Hello FM 106.4 FM", "4. Red FM 93.7 FM", "4. BIG FM"],
-    },
-    {
-      name: "Hyderabad Radio Stations",
-      stations: [
-        "1. Red FM 93.5 FM",
-        "2. Mirchi 95.8 FM",
-        "3. Fever 91 FM",
-        "4. AIR FM 97 FM",
-      ],
-    },
-    {
-      name: "Kochi Radio Stations",
-      stations: [
-        "1. Radio Mirchi 98.3 FM",
-        "2. Red FM 93.7 FM",
-        "3. Fever 91 FM",
-        "4. AIR FM Rainbow",
-        "5. Radio City 91 FM",
-      ],
-    },
-    {
-      name: "Pune Radio Stations",
-      stations: [
-        "1. Radio City 91 FM",
-        "2. Red FM 93.5 FM",
-        "3. BIG 98.3 FM",
-        "4. Fever 91 FM",
-        "5. AIR FM Rainbow",
-      ],
-    },
-    {
-      name: "Ahmedabad Radio Stations",
-      stations: ["1. Red FM 93.5 FM", "2. Fever 104 FM", "3. AIR FM Rainbow"],
-    },
-  ],
-};
-
-// Radio Genres
-
-export const radioGenresData: RadioGenresData = {
-  title: "Non-stop & Bhakti Radio",
-  genres: [
-    {
-      name: "Bollywood",
-      description:
-        "Charts, film tracks that keep listeners engaged throughout the day",
-    },
-    {
-      name: "Non-stop Bollywood",
-      description:
-        "Charts, film tracks that keep listeners engaged throughout the day",
-    },
-    {
-      name: "Spiritual & Bhakti",
-      description:
-        "Radio stations featuring bhajans, kirtans, and religious music from different traditions",
-    },
-    {
-      name: "News & Talk",
-      description:
-        "Live news updates, talks, interviews, and discussions on current affairs, lifestyle, social topics",
-    },
-    {
-      name: "Retro & Old",
-      description:
-        "Songs from past decades that are timeless masterpieces and bring nostalgia",
-    },
-    {
-      name: "Regional Folk",
-      description:
-        "Music from various Indian states, celebrating regional culture and heritage",
-    },
-    {
-      name: "Youth & Indie",
-      description:
-        "Fresh independent artists and contemporary music for younger trend-seeking listeners",
-    },
-  ],
-};
 
 export const faqData: FAQItem[] = [
   {
@@ -398,41 +113,215 @@ export const NRI_SECTION_DATA: ParagraphSectionData = {
   ],
 };
 
-export const INDIAN_GENRES_DATA: GenreSectionData = {
-  heading: "Popular Indian Radio Genres",
-  intro:
-    "Indian online radio is as diverse as its culture. Whether you want to listen to Bollywood hits, or want to listen to bhajans, or are in the mood for thoughtful conversations, there is always a genre that matches your taste.",
-  subIntro: "Here are some popular Indian radio genres:",
-  genres: [
-    {
-      title: "Bollywood Radio",
-      description:
-        "Non-stop Bollywood hits, chartbusters, and film soundtracks that keep listeners engaged throughout the day.",
-    },
-    {
-      title: "Devotional & Bhakti Radio",
-      description:
-        "Spiritual and peaceful radio stations featuring bhajans, kirtans, and religious music from different traditions.",
-    },
-    {
-      title: "News & Talk Radio",
-      description:
-        "Live news updates, talk shows, interviews, and discussions on current affairs, lifestyle, and social topics.",
-    },
-    {
-      title: "Retro & Old Songs",
-      description:
-        "Classic tracks from past decades that are timeless masterpieces and bring nostalgia.",
-    },
-    {
-      title: "Regional Folk Music",
-      description:
-        "Local rhythms and traditional music from various Indian states, celebrating regional culture and heritage.",
-    },
-    {
-      title: "Youth & Indie Music",
-      description:
-        "Fresh sounds, independent artists, and contemporary music for younger and trend-seeking listeners.",
-    },
-  ],
-};
+export const stations: Station[] = [
+  {
+    name: "Radio Mirchi",
+    frequency: "98.3 FM",
+    genre: "Bollywood, Indian music",
+    languages:
+      "Hindi, Telugu, Punjabi, Malayalam, Tamil, Kannada, Bengali, Gujarati, Multilingual, International, Marathi",
+    country: "India",
+  },
+  {
+    name: "Red FM",
+    frequency: "93.5 FM",
+    genre: "Bollywood, talk, rock, dance",
+    languages: "Hindi, Kannada, Malayalam, Telugu",
+    country: "India",
+  },
+  {
+    name: "Radio City",
+    frequency: "91.1 FM",
+    genre: "News, talk, pop",
+    languages: "Hindi",
+    country: "India",
+  },
+  {
+    name: "Fever FM",
+    frequency: "Primarily 104.0 MHz",
+    genre: "Bollywood",
+    languages:
+      "Hindi, English, Marathi in Mumbai, Tamil in Chennai, Kannada in Bengaluru",
+    country: "India",
+  },
+  {
+    name: "All India Radio (AIR) FM Gold/Rainbow",
+    frequency: "107.1 MHz",
+    genre: "Bollywood, Western pop",
+    languages:
+      "Hindi, English, Marathi in Mumbai, Tamil in Chennai, Kannada in Bengaluru",
+    country: "India",
+  },
+  {
+    name: "Vividh Bharati (AIR)",
+    frequency: "Between 93.9 MHz and 104.5 MHz",
+    genre: "Bollywood, shows, comedy, etc",
+    languages: "Hindi and other regional languages",
+    country: "India",
+  },
+  {
+    name: "Radio Nasha",
+    frequency: "107.2 FM, 91.9 FM, 94.3 FM",
+    genre: "Bollywood, Pop",
+    languages: "Hindi",
+    country: "India",
+  },
+  {
+    name: "My FM",
+    frequency: "94.3 FM",
+    genre: "News, pop",
+    languages: "Hindi",
+    country: "India",
+  },
+  {
+    name: "Radio One",
+    frequency: "94.3 FM",
+    genre: "Pop, rock",
+    languages: "International, English",
+    country: "India",
+  },
+];
+
+//indian radio by language
+export const languages: LanguageStation[] = [
+  {
+    language: "Hindi Radio Stations",
+    stations: [
+      "Radio Mirchi 98.3 FM",
+      "Red FM 93.5 FM",
+      "Vividh Bharati 100.1 FM",
+      "Mirchi Love 104 FM",
+      "Radio Nasha 107.2 FM",
+    ],
+  },
+  {
+    language: "English Radio Stations",
+    stations: ["Radio One 94.3 FM", "Indigo 91.9 FM", "Kool 104 FM"],
+  },
+  {
+    language: "Tamil Radio Stations",
+    stations: ["Suryan FM 93.5 FM", "Hello FM 106.4 FM", "Radio Mirchi Tamil"],
+  },
+  {
+    language: "Telugu Radio Stations",
+    stations: [
+      "Radio Mirchi Telugu 98.3 FM",
+      "Big FM 92.7 FM",
+      "Radio City 91.1 FM",
+      "Red FM 93.5 FM",
+    ],
+  },
+  {
+    language: "Malayalam Radio Stations",
+    stations: [
+      "Radio Mango 91.9 FM",
+      "Club FM 94.3 FM",
+      "Red FM 93.5 FM",
+      "Radio Mirchi 98.3 FM",
+    ],
+  },
+  {
+    language: "Kannada Radio Stations",
+    stations: [
+      "Radio City Kannada 91.1 FM",
+      "Big FM 92.7 FM",
+      "Radio Mirchi 98.3 FM",
+    ],
+  },
+  {
+    language: "Punjabi Radio Stations",
+    stations: ["All India Radio Punjabi Channels", "Punjabi Fever 107.2 FM"],
+  },
+  {
+    language: "Bengali Radio Stations",
+    stations: ["Friends FM 91.9 FM", "Amar FM 106.2 FM"],
+  },
+  {
+    language: "Marathi Radio Stations",
+    stations: ["Friends FM 91.9 FM", "Amar FM 106.2 FM"],
+  },
+  {
+    language: "Gujarati Radio Stations",
+    stations: ["Radio City Ahmedabad", "My FM 104.3 FM"],
+  },
+  {
+    language: "Urdu Radio Stations",
+    stations: ["Radio Charminar 107.8 FM", "AIR Urdu Service"],
+  },
+];
+
+
+export const cities: CityStation[] = [
+  {
+    city: "Delhi NCR Radio Stations",
+    stations: [
+      "Radio Mirchi 98.3 FM",
+      "Red FM 93.5 FM",
+      "Fever 104 FM",
+      "BIG FM 92.7 FM",
+    ],
+  },
+  {
+    city: "Mumbai Radio Stations",
+    stations: [
+      "Radio Mirchi 98.3 FM",
+      "Radio City 91.1 FM",
+      "Radio Nasha 98.3 FM",
+      "Fever 104 FM",
+    ],
+  },
+  {
+    city: "Bengaluru Radio Stations",
+    stations: [
+      "Red FM 93.5 FM",
+      "Radio City 91.1 FM",
+      "Fever 104 FM",
+      "BIG FM 92.7 FM",
+    ],
+  },
+  {
+    city: "Chennai Radio Stations",
+    stations: [
+      "Radio Mirchi 98.3 FM",
+      "Hello FM 106.4 FM",
+      "Chennai Live 104.8 FM",
+      "BIG FM 92.7 FM",
+    ],
+  },
+  {
+    city: "Hyderabad Radio Stations",
+    stations: [
+      "Radio Mirchi 98.3 FM",
+      "Red FM 93.5 FM",
+      "Fever 104 FM",
+      "Radio City 91.1 FM",
+    ],
+  },
+  {
+    city: "Kolkata Radio Stations",
+    stations: [
+      "Radio Mirchi 98.3 FM",
+      "Red FM 93.5 FM",
+      "BIG FM 92.7 FM",
+      "AIR FM Rainbow",
+    ],
+  },
+  {
+    city: "Pune Radio Stations",
+    stations: [
+      "Radio City 91.1 FM",
+      "Red FM 93.5 FM",
+      "Radio Mirchi 98.3 FM",
+      "BIG FM 92.7 FM",
+    ],
+  },
+  {
+    city: "Ahmedabad Radio Stations",
+    stations: [
+      "Radio Mirchi 98.3 FM",
+      "Red FM 93.5 FM",
+      "BIG FM 92.7 FM",
+      "Radio City 91.1 FM",
+    ],
+  },
+];
