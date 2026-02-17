@@ -60,10 +60,7 @@ export default function Footer({ footer }) {
                       priority
                     />
                   </span>
-                  <h2
-                    className="text-[18px] sm:text-[22px] md:text-[35px] 
-                    font-normal leading-none"
-                  >
+                  <h2 className="text-[18px] sm:text-[22px] md:text-[35px] font-normal leading-none">
                     {brand}
                   </h2>
                 </div>
@@ -290,22 +287,13 @@ export default function Footer({ footer }) {
         {/* Big background word */}
         <div className="relative overflow-hidden mt-6">
           <h3
-            className="
-              text-white font-bold text-center leading-none wrap-break-word
-              text-[18vw]
-              sm:text-[24vw]
-              md:text-[160px]
-              lg:text-[200px]
-              xl:text-[220px]
-              2xl:text-[240px]
-              translate-y-[15%] 
-              sm:translate-y-[15%]
-              md:translate-y-[25%]
-              lg:translate-y-[28%]
-            "
+            className={`text-white font-bold text-center leading-none wrap-break-word
+    text-[18vw] sm:text-[24vw] md:text-[160px] lg:text-[200px] xl:text-[220px] 2xl:text-[240px]
+    translate-y-[15%] sm:translate-y-[15%] md:translate-y-[25%] lg:translate-y-[28%]`}
           >
             TalesFM
           </h3>
+
           <div
             className="pointer-events-none absolute inset-x-0 bottom-0"
             style={{
