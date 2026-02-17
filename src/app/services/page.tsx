@@ -15,11 +15,11 @@ function Page() {
   ];
 
   return (
-    <div className="flex justify-center gap-5 mt-40  ">
+    <div className="flex flex-col md:flex-row justify-center  items-center gap-4 md:gap-5 px-4 md:px-0 mt-40 md:mt-40 max-w-4xl mx-auto">
       {services.map((service, i) => (
         <Link
           key={i}
-          className="border border-amber-50/30 p-5 rounded-2xl hover:scale-110 transition-all duration-150 ease-in-out"
+          className="w-full md:w-auto border  border-amber-50/30 p-5  md:p-5 rounded-2xl hover:scale-110 transition-all duration-150 ease-in-out text-center"
           href={service.href}
         >
           {service.name}

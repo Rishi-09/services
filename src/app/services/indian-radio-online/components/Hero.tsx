@@ -3,7 +3,7 @@ import { INDIAN_RADIO_DATA, WHY_STILL_RADIO } from "../constants";
 
 export default function Page() {
   return (
-    <div className="mt-10 space-y-16">
+    <div className="mt-40 max-w-11/12 lg:max-w-9/12 md:max-w-10/12 sm:max-w-10/12 mx-auto space-y-16">
       
       {[INDIAN_RADIO_DATA, WHY_STILL_RADIO].map((data, i) => (
         <Body key={i} data={data} />

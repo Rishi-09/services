@@ -7,24 +7,19 @@ import FAQSection from "../components/FAQSection";
 import MultiSection from "./components/MultiSection";
 
 import { faqData } from "./constants";
-import { SectionContainer } from "../components/SectionContainer";
 import IndianRadioByCity from "./components/IndianRadioByCity";
 
 function page() {
   return (
     <div>
-      <SectionContainer>
-        <Hero />
-      </SectionContainer>
-      <SectionContainer>
-        <Explore />
-      </SectionContainer>
-      <SectionContainer>
-        <IndianRadioByLanguage />
-      </SectionContainer>
-      <SectionContainer>
-        <IndianRadioByCity />
-      </SectionContainer>
+      <Hero />
+
+      <Explore />
+
+      <IndianRadioByLanguage />
+
+      <IndianRadioByCity />
+
       <MultiSection />
       <FAQSection faqData={faqData} />
     </div>

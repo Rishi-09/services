@@ -83,7 +83,7 @@ const cities: CityStation[] = [
 export default function IndianRadioByCity() {
   return (
     <section className="bg-black text-white py-20 sm:py-24 md:py-28">
-      <div className="mx-auto px-4 sm:px-6">
+      <div className="lg:max-w-9/12 md:max-w-10/12 sm:max-w-10/12 mx-auto px-4 sm:px-6">
 
         {/* Header */}
         <div className="space-y-6 mb-14">
@@ -98,7 +98,17 @@ export default function IndianRadioByCity() {
         </div>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div
+  className="
+    flex gap-6 overflow-x-auto scroll-smooth
+    snap-x snap-mandatory
+    no-scrollbar
+    sm:grid sm:grid-cols-2
+    lg:grid-cols-3 xl:grid-cols-4
+    sm:overflow-visible
+  "
+>
+
 
           {cities.map((item, index) => (
             <div
@@ -113,7 +123,8 @@ export default function IndianRadioByCity() {
                 shadow-[0_8px_30px_rgba(0,0,0,0.6)]
                 transition-all duration-400
                 hover:-translate-y-1.5
-                hover:shadow-[0_15px_45px_rgba(0,0,0,0.8)]
+                hover:shadow-[0_15px_45px_rgba(0,0,0,0.8)] min-w-[85%] sm:min-w-0 snap-start
+
               "
             >
               {/* Card Inner Light */}

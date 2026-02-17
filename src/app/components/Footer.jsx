@@ -1,10 +1,15 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { FaInstagram, FaFacebook, FaYoutube, FaPinterest } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaFacebook,
+  FaYoutube,
+  FaPinterest,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useRef } from "react";
-import logo from '../../../public/logo.png'
+import logo from "../../../public/logo.png";
 export default function Footer({ footer }) {
   const sectionRef = useRef(null);
   const brand = footer?.brand ?? "TalesFM";
@@ -30,21 +35,14 @@ export default function Footer({ footer }) {
     });
   };
   return (
-    <footer ref={sectionRef} className="bg-[#0f0f0f] mt-10 text-white pt-6 sm:pt-8 md:pt-10 rounded-t-2xl sm:rounded-t-[3rem] overflow-hidden relative w-full">
+    <footer
+      ref={sectionRef}
+      className="bg-[#0f0f0f] mt-10 text-white pt-6 sm:pt-8 md:pt-10 rounded-t-2xl sm:rounded-t-[3rem] overflow-hidden relative w-full"
+    >
       {/* Outer container */}
       <div className="w-full max-w-7xl mx-auto px-3 sm:px-5 md:px-6 pt-10 relative z-50">
         {/* Inner rounded container */}
-        <div
-          className="
-            bg-[#1c1c1c] rounded-[18px] p-4 border border-white/10 
-            shadow-[0_3px_22px_rgba(0,0,0,0.25)]
-            md:border-0 md:shadow-none md:rounded-[3.2rem] md:bg-[#1c1c1c]
-            sm:rounded-[2.4rem]
-            sm:p-5 md:py-10 lg:py-10
-            flex flex-col md:flex-row justify-between gap-6
-            overflow-hidden w-full max-w-264 mx-auto 
-          "
-        >
+        <div className="bg-[#1c1c1c] rounded-[18px] p-4 border border-white/10 shadow-[0_3px_22px_rgba(0,0,0,0.25)] md:border-0 md:shadow-none md:rounded-[3.2rem] md:bg-[#1c1c1c] sm:rounded-[2.4rem] sm:p-5 md:py-10 lg:py-10 flex flex-col md:flex-row justify-between gap-6 overflow-hidden w-full max-w-264 mx-auto">
           {/* Left column */}
           <div className="flex-1 px-0 sm:px-3">
             <div className="flex flex-col md:flex-row gap-5 md:gap-6 items-start">
@@ -134,27 +132,47 @@ export default function Footer({ footer }) {
                   <h3 className="text-[16px] font-semibold mb-2">Pages</h3>
                   <ul className="text-gray-300 text-[12px] space-y-1.5">
                     <li>
-                      <Link href="/" className="hover:text-white" onClick={() => logClick("Home", "pages-mobile")}>
+                      <Link
+                        href="/"
+                        className="hover:text-white"
+                        onClick={() => logClick("Home", "pages-mobile")}
+                      >
                         Home
                       </Link>
                     </li>
                     <li>
-                      <Link href="/about-us" className="hover:text-white" onClick={() => logClick("About Us", "pages-mobile")}>
+                      <Link
+                        href="/about-us"
+                        className="hover:text-white"
+                        onClick={() => logClick("About Us", "pages-mobile")}
+                      >
                         About Us
                       </Link>
                     </li>
                     <li>
-                      <Link href="/contact-us" className="hover:text-white" onClick={() => logClick("Contact Us", "pages-mobile")}>
+                      <Link
+                        href="/contact-us"
+                        className="hover:text-white"
+                        onClick={() => logClick("Contact Us", "pages-mobile")}
+                      >
                         Contact Us
                       </Link>
                     </li>
                     <li>
-                      <Link href="/blog" className="hover:text-white" onClick={() => logClick("Blog", "pages-mobile")}>
+                      <Link
+                        href="/blog"
+                        className="hover:text-white"
+                        onClick={() => logClick("Blog", "pages-mobile")}
+                      >
                         Blog
                       </Link>
                     </li>
                     <li>
-                      <Link href="/author" className="hover:text-white" onClick={() => logClick("Author", "pages-mobile")}>
+                      <Link
+                        href="/author"
+                        className="hover:text-white"
+                        onClick={() => logClick("Author", "pages-mobile")}
+                      >
                         Author
                       </Link>
                     </li>
@@ -165,15 +183,18 @@ export default function Footer({ footer }) {
                     <Link
                       href="/privacy-policy"
                       className="text-[12px] text-gray-200 hover:text-white py-0.5"
-                      onClick={() => logClick("Privacy Policy", "policies-mobile")}
+                      onClick={() =>
+                        logClick("Privacy Policy", "policies-mobile")
+                      }
                     >
                       Privacy Policy
                     </Link>
                     <Link
                       href="/terms"
                       className="text-[12px] text-gray-200 hover:text-white px-1.5 py-0.5"
-
-                      onClick={() => logClick("Terms of Service", "policies-mobile")}
+                      onClick={() =>
+                        logClick("Terms of Service", "policies-mobile")
+                      }
                     >
                       Terms of Service
                     </Link>
@@ -195,43 +216,70 @@ export default function Footer({ footer }) {
                 </h3>
                 <ul className="space-y-2 text-gray-400 text-[15px] sm:text-lg text-left">
                   <li>
-                    <Link href="/" className="hover:text-white" onClick={() => logClick(homeLabel, "pages-desktop")}>
+                    <Link
+                      href="/"
+                      className="hover:text-white"
+                      onClick={() => logClick(homeLabel, "pages-desktop")}
+                    >
                       {homeLabel}
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about-us" className="hover:text-white" onClick={() => logClick(aboutLabel, "pages-desktop")}>
+                    <Link
+                      href="/about-us"
+                      className="hover:text-white"
+                      onClick={() => logClick(aboutLabel, "pages-desktop")}
+                    >
                       {aboutLabel}
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact-us" className="hover:text-white" onClick={() => logClick(contactLabel, "pages-desktop")}>
+                    <Link
+                      href="/contact-us"
+                      className="hover:text-white"
+                      onClick={() => logClick(contactLabel, "pages-desktop")}
+                    >
                       {contactLabel}
                     </Link>
                   </li>
                   <li>
-                    <Link href="/blog" className="hover:text-white" onClick={() => logClick("Blog", "pages-desktop")}>
+                    <Link
+                      href="/blog"
+                      className="hover:text-white"
+                      onClick={() => logClick("Blog", "pages-desktop")}
+                    >
                       Blog
                     </Link>
                   </li>
                   <li>
-                    <Link href="/author" className="hover:text-white" onClick={() => logClick("Author", "pages-desktop")}>
+                    <Link
+                      href="/author"
+                      className="hover:text-white"
+                      onClick={() => logClick("Author", "pages-desktop")}
+                    >
                       Author
                     </Link>
                   </li>
                 </ul>
-                
-              </div>  
+              </div>
             </div>
 
             {/* Divider + copyright row — DESKTOP */}
             <div className="hidden md:flex border-t border-gray-600 mt-6 pt-3 flex-col md:flex-row justify-between items-center gap-3 text-gray-400">
               <p className="text-xs sm:text-sm md:text-base">{copyright}</p>
               <div className="flex flex-row gap-3 sm:gap-5 text-xs sm:text-sm md:text-lg">
-                <Link href="/privacy-policy" className="hover:text-white" onClick={() => logClick(privacyLabel, "policies-desktop")}>
+                <Link
+                  href="/privacy-policy"
+                  className="hover:text-white"
+                  onClick={() => logClick(privacyLabel, "policies-desktop")}
+                >
                   {privacyLabel}
                 </Link>
-                <Link href="/terms" className="hover:text-white" onClick={() => logClick(termsLabel, "policies-desktop")}>
+                <Link
+                  href="/terms"
+                  className="hover:text-white"
+                  onClick={() => logClick(termsLabel, "policies-desktop")}
+                >
                   {termsLabel}
                 </Link>
               </div>
